@@ -40,7 +40,7 @@ export default function BookTicket(props) {
       Ticket.NT !== ""
     ) {
       axios
-        .post("http://localhost:5000/ticket/issueTicket", Ticket)
+        .post("https://backend-hyug.onrender.com/ticket/issueTicket", Ticket)
         .then((res) => {
           if (res.data.status === "success") {
             setTicketNo(res.data.id);
